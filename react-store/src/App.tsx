@@ -1,6 +1,7 @@
 import { Box, Container } from '@mui/material'
 import './App.css'
-import { Navbar } from './Components'
+import { Home, Navbar } from './Components'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
@@ -9,7 +10,9 @@ function App() {
       <Box>
         <Navbar />
         <Container maxWidth='lg'>
-          content
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
         </Container>
       </Box>
     </>
