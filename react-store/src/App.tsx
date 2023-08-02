@@ -1,10 +1,17 @@
+import { Box, Container } from '@mui/material'
 import './App.css'
+import { Navbar } from './Components'
 
 function App() {
 
   return (
     <>
-      <div>App</div>
+      <Box>
+        <Navbar />
+        <Container maxWidth='lg'>
+          content
+        </Container>
+      </Box>
     </>
   )
 }
