@@ -1,8 +1,9 @@
-import { Box, Paper, Typography, styled } from "@mui/material"
+import { Box, Button, Paper, Typography, styled } from "@mui/material"
 import wallpaper from '/assets/wallpaper.jpg'
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { supabase } from "../supaBaseClient"
+import { ArrowCircleRight } from "@mui/icons-material"
 
 const BodyBox = styled(Box)({
     backgroundColor: '#9DB2BF',
@@ -42,6 +43,7 @@ const BodyTitle = styled(Typography)({
 })
 
 const Home = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [top3, setTop3] = useState<any>([])
 
     useEffect(() => {
@@ -60,7 +62,7 @@ const Home = () => {
 
     return (
         <>
-        <Box mt={2}>
+        <Box mt={10}>
             <HeroPaper>
                 <HeroTitle variant="h3">
                     Web Development Book Store
@@ -93,8 +95,20 @@ const Home = () => {
                         ))
                     }
                 </Box>
+                <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
+                    <Button variant="contained">
+                        View All Books<ArrowCircleRight sx={{ml: 1}} />
+                    </Button>
+                </Box>
             </BodyBox>
-            Home
+            <Box mt={2}>
+                <BodyTitle variant="h4">
+                    Our Favorite Books
+                </BodyTitle>
+                <Typography variant="body1" sx={{fontStyle: 'italic'}}>
+                    Section still under construction....
+                </Typography>
+            </Box>
         </Box>
         </>
     )
