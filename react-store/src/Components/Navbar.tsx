@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <>
         <MainBox>
-            <AppBar position="sticky">
+            <AppBar position="fixed">
                 <Toolbar>
                     <MainContainer maxWidth='lg'>
                         <LeftBox>
