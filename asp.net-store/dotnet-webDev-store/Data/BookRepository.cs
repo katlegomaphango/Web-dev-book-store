@@ -23,12 +23,12 @@ namespace dotnet_webDev_store.Data
 
         public IQueryable<Book> GetAllBooks()
         {
-            return _appDbContext.Books;
+            return _appDbContext.Books.OrderBy(b => b.BookTitle);
         }
 
         public IQueryable<Book> GetLatestBooks()
         {
-            return _appDbContext.Books.OrderBy(b => b.DateAdded).Take(3);
+            return _appDbContext.Books.OrderByDescending(b => b.DateAdded).Take(3);
         }
 
         public Book GetBookById(int id)
