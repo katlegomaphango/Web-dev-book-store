@@ -12,9 +12,9 @@ namespace dotnet_webDev_store.Controllers
             _bookRepo = repo;
         }
 
-        public IActionResult ViewBook()
+        public IActionResult ViewBook(int id)
         {
-            return View();
+            return View(_bookRepo.GetBookById(id));
         }
     }
 }

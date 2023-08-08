@@ -20,7 +20,7 @@
     @foreach(var book in Model) {
         <div>
             <h3>
-                <a asp-controller="Books" asp-action="ViewBook" class="text-decoration-none">@book.BookTitle</a>
+                <a asp-controller="Books" asp-action="ViewBook" asp-route-id="@book.BookId" class="text-decoration-none">@book.BookTitle</a>
             </h3>
 
             <p>
