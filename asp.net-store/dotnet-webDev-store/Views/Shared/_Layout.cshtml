@@ -9,33 +9,54 @@
     <link rel="stylesheet" href="~/dotnet_webDev_store.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">webDev Store</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+    <header class="bg-primary">
+        <!-- Navigation -->
+        <div class="navbar navbar-expand-md bg-primary navbar-dark">
+            <div class="container">
+                <!-- Brand -->
+                <!-- Link to Home page -->
+                <a class="navbar-brand" href="#">WebDev</a>
+
+                <!-- Toggler/collapsible Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#MyNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="MyNavbar">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Books
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">View All Books</a></li>
+                                <li><a class="dropdown-item" href="#">Add Book</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
+    <div class="container mt-2">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - dotnet_webDev_store
+    <footer class="container mt-5">
+        <hr >
+        <div class="text-center text-muted small">
+            <p>
+                Created by: <a href="https://www.katlegomaphango.co.za">Katlego Maphango</a>
+                &copy; 2023 - dotnet_webDev_store
+            </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
