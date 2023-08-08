@@ -16,5 +16,9 @@ namespace dotnet_webDev_store.Controllers
         {
             return View(_bookRepo.GetBookById(id));
         }
+
+        public IActionResult ViewAllBooks() {
+            return View(_bookRepo.GetAllBooks());
+        }
     }
 }

@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="MyNavbar">
                     <ul class="navbar-nav ml-auto  ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,7 +35,7 @@
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">View All Books</a></li>
+                                <li><a class="dropdown-item" asp-controller="Books" asp-action="ViewAllBooks">View All Books</a></li>
                                 <li><a class="dropdown-item" href="#">Add Book</a></li>
                             </ul>
                         </li>
