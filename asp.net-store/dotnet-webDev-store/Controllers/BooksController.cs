@@ -1,4 +1,5 @@
 using dotnet_webDev_store.Data;
+using dotnet_webDev_store.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet_webDev_store.Controllers
@@ -19,6 +20,16 @@ namespace dotnet_webDev_store.Controllers
 
         public IActionResult ViewAllBooks() {
             return View(_bookRepo.GetAllBooks());
+        }
+
+        [HttpGet]
+        public IActionResult AddBook() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddBook(Book book) {
+            return View();
         }
     }
 }
