@@ -26,6 +26,11 @@ namespace dotnet_webDev_store.Data
             return _appDbContext.Books;
         }
 
+        public IQueryable<Book> GetLatestBooks()
+        {
+            return _appDbContext.Books.OrderBy(b => b.DateAdded).Take(3);
+        }
+
         public Book GetBookById(int id)
         {
             return _appDbContext.Books.Find(id);

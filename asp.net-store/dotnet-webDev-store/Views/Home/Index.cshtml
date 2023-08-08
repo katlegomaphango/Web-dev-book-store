@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IQueryable<Book>
+
+@{
     ViewData["Title"] = "Home";
 }
 
@@ -15,19 +17,35 @@
     <h1 class="text-center">New releases</h1>
 
     <!-- Display the three most recently added books here -->
-    <div>
-        <h3>
-            <a href="#" class="text-decoration-none">BookTitle</a>
-        </h3>
+    @foreach(var book in Model) {
+        <div>
+            <h3>
+                <a href="#" class="text-decoration-none">@book.BookTitle</a>
+            </h3>
 
-        <p>Price</p>
-        <p class="small">
-            Written by ..... <br />
-            Added to collection on ....
-        </p>
-        <p>Rating stars</p>
-        <hr />
-    </div>
+            <p>
+                @book.Price.ToString("C")
+            </p>
+
+            <p class="small">
+                Written by @book.Author <br />
+                Added to collection on @book.DateAdded.ToShortDateString()
+            </p>
+
+            <p>
+                Rating stars
+                @for(int i = 1; i <= 5; i++) {
+                    if(i <= @book.Rating){
+                        <span>i</span>
+                        continue;
+                    }
+                    <span>o</span>
+                }
+            </p>
+
+            <hr />
+        </div>
+    }
 </div>
 
 <div class="text-end">
