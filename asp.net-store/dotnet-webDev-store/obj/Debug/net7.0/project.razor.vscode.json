@@ -18659,6 +18659,11 @@
       "FilePath": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/Views/Books/ViewBook.cshtml",
+      "TargetPath": "Views\\Books\\ViewBook.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.3"
