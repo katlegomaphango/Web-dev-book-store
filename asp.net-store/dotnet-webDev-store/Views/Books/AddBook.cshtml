@@ -1,3 +1,4 @@
+@model Book
 
 @{
     ViewData["Title"] = "Add Book";
@@ -6,3 +7,58 @@
 <h1>
     Add a Book
 </h1>
+
+<div class="row">
+    <div class="col-md-5">
+        <form action="AddBook" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @* book title *@
+            <div class="form-group">
+                <label asp-for="BookTitle" class="control-label"></label>
+                <input asp-for="BookTitle" class="form-control" />
+                <span asp-validation-for="BookTitle" class="text-danger"></span>
+            </div>
+
+            @* author *@
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+
+            @* description *@
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            @* price *@
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            @* rating dropdown *@
+            <div class="form-group">
+                <label asp-for="Rating" class="control-label"></label>
+                <select class="form-select" asp-for="Rating">
+                    <option value="">Choose Rating...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+
+            @* submit btn *@
+            <div class="text-end">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
