@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.jumbotron {
+  background-image: url('../images/wallpaper.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 17rem;
+}
