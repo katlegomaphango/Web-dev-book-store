@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/wwwroot/images/wallpaper.jpg",
+      "PackagePath": "staticwebassets/images/wallpaper.jpg"
+    },
+    {
       "Id": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7xC5n4CYD5wdKtTGursnbaX5yStumRzLXlmuXoIXG6c=",
+  "Hash": "m5+ewOzhpx1IYH+AWDx4k+2qdOj2Xa0YJ9NI32GtTJI=",
   "Source": "dotnet-webDev-store",
   "BasePath": "_content/dotnet-webDev-store",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/wwwroot/images/wallpaper.jpg",
+      "SourceId": "dotnet-webDev-store",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/wwwroot/",
+      "BasePath": "_content/dotnet-webDev-store",
+      "RelativePath": "images/wallpaper.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/wallpaper.jpg"
     },
     {
       "Identity": "/home/ivan/Documents/CodeSpace/Asp.Net/Web-dev-book-store/asp.net-store/dotnet-webDev-store/wwwroot/js/site.js",
