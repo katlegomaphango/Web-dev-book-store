@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 import './App.css'
-import { Footer, Home, Navbar } from './Components'
+import { Footer, Home, Navbar, ViewBook } from './Components'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
         <Container maxWidth='lg'>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/ViewBook/:id' element={<ViewBook />} />
           </Routes>
         </Container>
         <Footer />
