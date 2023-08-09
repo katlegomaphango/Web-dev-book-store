@@ -1,6 +1,7 @@
 import { Home, LibraryAdd, LibraryBooks, List, MenuBook } from "@mui/icons-material"
 import { AppBar, Box, Button, Container, Menu, MenuItem, Toolbar, Typography, styled } from "@mui/material"
 import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 
 
 const MainBox = styled(Box)({
@@ -25,6 +26,7 @@ const RightBox = styled(Box)({
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] =useState<null | HTMLElement>(null)
+    const navigate = useNavigate()
     const open = Boolean(anchorEl)
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -61,6 +63,7 @@ const Navbar = () => {
                                 startIcon={<Home />}
                                 color="inherit"
                                 size="large"
+                                onClick={() => navigate('/')}
                             >
                                 Home
                             </Button>
@@ -84,8 +87,11 @@ const Navbar = () => {
                                     }}
                                 >
                                     <MenuItem onClick={handleClose}>
-                                        <List sx={{mr: 1}} />
-                                        View All
+                                        <Link to={'/ViewAllBooks'} style={{textDecoration: "none", display: 'flex'}}>
+                                            <List sx={{mr: 1}} />
+                                            View All
+                                        </Link>
+                                        
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
                                         <LibraryAdd sx={{mr: 1}} />

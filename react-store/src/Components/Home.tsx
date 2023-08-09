@@ -1,6 +1,6 @@
 import { Box, Button, Paper, Rating, Typography, styled } from "@mui/material"
 import wallpaper from '/assets/wallpaper.jpg'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { supabase } from "../supaBaseClient"
 import { ArrowCircleRight } from "@mui/icons-material"
@@ -45,6 +45,7 @@ const BodyTitle = styled(Typography)({
 const Home = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [top3, setTop3] = useState<any>([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -99,7 +100,7 @@ const Home = () => {
                     }
                 </Box>
                 <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <Button variant="contained">
+                    <Button variant="contained" onClick={() => navigate('/ViewAllBooks')}>
                         View All Books<ArrowCircleRight sx={{ml: 1}} />
                     </Button>
                 </Box>
