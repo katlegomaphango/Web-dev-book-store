@@ -1,4 +1,4 @@
-import { Box, Button, Paper, Typography, styled } from "@mui/material"
+import { Box, Button, Paper, Rating, Typography, styled } from "@mui/material"
 import wallpaper from '/assets/wallpaper.jpg'
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -90,6 +90,9 @@ const Home = () => {
                                 <Typography sx={{fontStyle: 'italic'}}>
                                     Written by {book.author} <br />
                                     Added to collection on {book.date_Added}
+                                </Typography>
+                                <Typography>
+                                    <Rating value={book.rating} readOnly />
                                 </Typography>
                             </Box>
                         ))
