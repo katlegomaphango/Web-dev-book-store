@@ -104,8 +104,8 @@ const Home = () => {
                     </Button>
                 </Box>
             </BodyBox>
-            <Box mt={2}>
-                <BodyTitle variant="h4">
+            <Box my={4}>
+                <BodyTitle variant="h4" my={4}>
                     Our Favorite Books
                 </BodyTitle>
                 <Typography variant="body1" sx={{fontStyle: 'italic'}}>
