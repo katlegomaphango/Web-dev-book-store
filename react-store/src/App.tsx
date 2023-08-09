@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 import './App.css'
-import { Home, Navbar } from './Components'
+import { Footer, Home, Navbar } from './Components'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
             <Route path='/' element={<Home />} />
           </Routes>
         </Container>
+        <Footer />
       </Box>
     </>
   )
