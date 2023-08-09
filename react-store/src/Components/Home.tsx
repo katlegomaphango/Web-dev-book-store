@@ -79,13 +79,13 @@ const Home = () => {
                     {
                         top3.map((book) => (
                             <Box key={book.id} mb={3}>
-                                <Link to={'/'} style={{textDecoration: 'none'}}>
+                                <Link to={`/ViewBook/${book.book_id}`} style={{textDecoration: 'none'}}>
                                     <Typography variant="h5">
                                         {book.title}
                                     </Typography>
                                 </Link>
                                 <Typography variant="h6" my={2}>
-                                    R {book.price}
+                                    R {book.price.toFixed(2)}
                                 </Typography>
                                 <Typography sx={{fontStyle: 'italic'}}>
                                     Written by {book.author} <br />
