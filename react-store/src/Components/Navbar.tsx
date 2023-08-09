@@ -91,11 +91,12 @@ const Navbar = () => {
                                             <List sx={{mr: 1}} />
                                             View All
                                         </Link>
-                                        
                                     </MenuItem>
                                     <MenuItem onClick={handleClose}>
-                                        <LibraryAdd sx={{mr: 1}} />
-                                        Add book
+                                        <Link to={'/AddBook'} style={{textDecoration: 'none', display: 'flex'}}>
+                                            <LibraryAdd sx={{mr: 1}} />
+                                            Add book
+                                        </Link>
                                     </MenuItem>
                                 </Menu>
                             </div>
