@@ -116,7 +116,7 @@ const Navbar = () => {
                                 component='div'
                                 ml={1}
                             >
-                                WeB Dev books
+                                WeB Devbooks
                             </Typography>
                         </IconButton>
                         <LeftBox sx={{ display: { xs: 'none', sm: 'flex' } }}>
@@ -183,7 +183,6 @@ const Navbar = () => {
             </AppBar>
             <Box component={'nav'}>
                 <Drawer
-                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}

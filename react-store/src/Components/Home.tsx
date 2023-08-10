@@ -1,4 +1,4 @@
-import { Box, Button, Paper, Rating, Typography, styled } from "@mui/material"
+import { Box, Button, Paper, Rating, Skeleton, Typography, styled } from "@mui/material"
 import wallpaper from '/assets/wallpaper.jpg'
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
@@ -78,7 +78,32 @@ const Home = () => {
                 </BodyTitle>
                 <Box mt={2}>
                     {
-                        top3.map((book) => (
+                        top3.length === 0 ? (
+                            <Box>
+                                <Box mb={3}>
+                                    <Skeleton sx={{width: {xs: '100%', md: '60%'}}} height={50} />
+                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                </Box>
+                                <Box mb={3}>
+                                    <Skeleton sx={{width: {xs: '100%', md: '60%'}}} height={50} />
+                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                </Box>
+                                <Box mb={3}>
+                                    <Skeleton sx={{width: {xs: '100%', md: '60%'}}} height={50} />
+                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                </Box>
+                            </Box>
+                        ) : 
+                        (top3.map((book) => (
                             <Box key={book.id} mb={3}>
                                 <Link to={`/ViewBook/${book.book_id}`} style={{textDecoration: 'none'}}>
                                     <Typography variant="h5">
@@ -96,7 +121,7 @@ const Home = () => {
                                     <Rating value={book.rating} readOnly sx={{color: 'black'}} />
                                 </Typography>
                             </Box>
-                        ))
+                        )))
                     }
                 </Box>
                 <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
