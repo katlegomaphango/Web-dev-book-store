@@ -41,8 +41,6 @@ const Navbar = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
-    const container = window.document.body
-
     const drawer = (
         <>
             <Box onClick={handleDrawerToggle} sx={{width: '15rem', pl: 2 }}>
