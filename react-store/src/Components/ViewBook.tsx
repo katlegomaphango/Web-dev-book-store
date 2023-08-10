@@ -39,15 +39,15 @@ const ViewBook = () => {
                 {
                     book.book_id == 0 ? (
                         <>
-                            <Skeleton sx={{width: {xs: '100%', md: '60%'}}} height={60} />
-                            <Skeleton sx={{width: {xs: '40%', md: '30%'}}} height={60} />
-                            <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
-                            <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
-                            <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                            <Skeleton animation="wave" sx={{width: {xs: '100%', md: '60%'}}} height={60} />
+                            <Skeleton animation="wave" sx={{width: {xs: '40%', md: '30%'}}} height={60} />
+                            <Skeleton animation="wave" sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                            <Skeleton animation="wave" sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                            <Skeleton animation="wave" sx={{width: {xs: '40%', md: '20%'}}} height={40} />
                             <Typography variant="h4" my={2}>
                                 Description
                             </Typography>
-                            <Skeleton sx={{width: {xs: '100%', md: '80%'}}} height={100} />
+                            <Skeleton animation="wave" sx={{width: {xs: '100%', md: '80%'}}} height={100} />
                         </> 
                     ) : (
                         <>

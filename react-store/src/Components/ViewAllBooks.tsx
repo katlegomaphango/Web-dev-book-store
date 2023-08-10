@@ -32,11 +32,11 @@ const ViewAllBooks = () => {
                         [0,1,2,3,4,5,6,7,8,9].map((_, i) => (
                             <Box key={i}>
                                 <Box mb={3}> 
-                                    <Skeleton sx={{width: {xs: '100%', md: '60%'}}} height={50} />
-                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
-                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
-                                    <Skeleton sx={{width: {xs: '100%', md: '40%'}}} height={20} />
-                                    <Skeleton sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                    <Skeleton animation="wave" sx={{width: {xs: '100%', md: '60%'}}} height={50} />
+                                    <Skeleton animation="wave" sx={{width: {xs: '40%', md: '20%'}}} height={40} />
+                                    <Skeleton animation="wave" sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton animation="wave" sx={{width: {xs: '100%', md: '40%'}}} height={20} />
+                                    <Skeleton animation="wave" sx={{width: {xs: '40%', md: '20%'}}} height={40} />
                                 </Box>
                             </Box>
                         ))
