@@ -36,11 +36,11 @@ const ViewAllBooks = () => {
                                 </Typography>
                             </Link>
                             <Typography variant="h6" my={2}>
-                                R {book.price.toFixed(2)}
+                                R {book.price}
                             </Typography>
                             <Typography sx={{fontStyle: 'italic'}}>
                                 Written by {book.author} <br />
-                                Added to collection on {book.date_Added}
+                                Added to collection on {new Date(book.date_Added).toLocaleDateString()}
                             </Typography>
                             <Typography my={2}>
                                 <Rating value={book.rating} readOnly sx={{color: 'black'}} />
