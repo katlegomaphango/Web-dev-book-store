@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { supabase } from "../supaBaseClient"
 import { ArrowCircleRight } from "@mui/icons-material"
+import { BOOK } from "../App"
 
 const BodyBox = styled(Box)({
     backgroundColor: '#9DB2BF',
@@ -43,8 +44,7 @@ const BodyTitle = styled(Typography)({
 })
 
 const Home = () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const [top3, setTop3] = useState<any>([])
+    const [top3, setTop3] = useState<BOOK[]>([])
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -103,8 +103,8 @@ const Home = () => {
                                 </Box>
                             </Box>
                         ) : 
-                        (top3.map((book) => (
-                            <Box key={book.id} mb={3}>
+                        (top3.map((book: BOOK) => (
+                            <Box key={book.book_id} mb={3}>
                                 <Link to={`/ViewBook/${book.book_id}`} style={{textDecoration: 'none'}}>
                                     <Typography variant="h5">
                                         {book.title}

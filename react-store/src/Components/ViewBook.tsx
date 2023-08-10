@@ -2,17 +2,18 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { supabase } from '../supaBaseClient'
 import { Box, Rating, Skeleton, Typography } from "@mui/material"
+import { BOOK } from "../App"
 
 
 
 const ViewBook = () => {
     const { id } = useParams()
-    const [book, setBook] = useState({
+    const [book, setBook] = useState<BOOK>({
         book_id: 0,
         title: '',
-        price: 0,
+        price: '',
         author: '',
-        date_Added: Date.now(),
+        date_Added: '',
         rating: 0,
         description: ''
     })

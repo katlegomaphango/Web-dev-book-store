@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 import { supabase } from "../supaBaseClient"
 import { Box, Rating, Skeleton, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
+import { BOOK } from "../App"
 
 
 const ViewAllBooks = () => {
-    const [bookArr, setBookArr] = useState<any>([])
+    const [bookArr, setBookArr] = useState<BOOK[]>([])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -41,8 +42,8 @@ const ViewAllBooks = () => {
                             </Box>
                         ))
                     ) :
-                    (bookArr.map((book) => (
-                        <Box key={book.id} mb={3}>
+                    (bookArr.map((book: BOOK) => (
+                        <Box key={book.book_id} mb={3}>
                             <Link to={`/ViewBook/${book.book_id}`} style={{textDecoration: 'none'}}>
                                 <Typography variant="h5">
                                     {book.title}
