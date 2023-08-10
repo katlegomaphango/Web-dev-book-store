@@ -34,8 +34,6 @@ const AddBook = () => {
         navigate('/')
     }
 
-    console.log(formData)
-
     return (
         <>
         <Box my={10} width={"100%"} display={'flex'} flexDirection={"column"} justifyContent={"center"} alignItems={"center"}>

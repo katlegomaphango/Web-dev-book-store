@@ -25,7 +25,6 @@ const ViewBook = () => {
                 .eq('book_id', id)
             
             if(error) throw error
-            console.log(data)
             setBook(data[0])
         }
 
